@@ -1,0 +1,315 @@
+/* NOTE: Configurações padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* NOTE: Declaração de Fontes */
+@font-face {
+    font-family: Rounded-ExtraBold;
+    src: url("../Assets/Fonts/MPLUSRounded1c-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: Rounded-Bold;
+    src: url("../Assets/Fonts/MPLUSRounded1c-Bold.ttf");
+}
+
+@font-face {
+    font-family: Rounded-Regular;
+    src: url("../Assets/Fonts/MPLUSRounded1c-Regular.ttf");
+}
+
+@font-face {
+    font-family: Rounded-Light;
+    src: url("../Assets/Fonts/MPLUSRounded1c-Light.ttf");
+}
+
+/* NOTE: Declartação de Cores */
+:root {
+    --header-bg-color: #334344;
+    --header-letters-color: #f9f9f9;
+}
+
+/* NOTE: Header */
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: var(--header-bg-color);
+}
+
+header h1 {
+    color: var(--header-letters-color);
+    font-family: Rounded-ExtraBold;
+    font-size: 4rem;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.55);
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+    list-style: none;
+}
+
+header a {
+    color: var(--header-letters-color);
+    text-decoration: none;
+    font-family: Rounded-Light;
+    font-size: 1.65rem;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.55);
+    transition: .3s ease-in-out;
+}
+
+header li {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: white;
+}
+
+header li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+header li:hover::after {
+    width: 100%;
+}
+
+/* NOTE: Main */
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    flex: 1;
+}
+
+.imgLogo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgLogo img {
+    width: 100%;
+    height: 35vw;
+    object-fit: fill;
+}
+
+.imgLogo div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    font-family: Rounded-Bold;
+    font-size: 3.5rem;
+}
+
+#home-description-pizzas #imgs {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+#home-description-pizzas #imgs #img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    h1 {
+        font-family: Rounded-Bold;
+        font-size: 2.5rem;
+        text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.15);
+    }
+
+}
+
+.section-part-description h2 {
+    font-family: Rounded-ExtraBold;
+    text-align: center;
+    font-size: 5rem;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.15);
+}
+
+.section-part-description div {
+    padding: 3em;
+
+    p {
+        font-family: Rounded-Regular;
+        font-size: 1.8rem;
+        margin-bottom: 5mm;
+    }
+
+}
+
+.section-part-description table {
+    border-collapse: collapse;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.section-part-description table th {
+    background-color: #334344;
+    padding: .33em;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.55);
+    text-align: left;
+    font-family: Rounded-Bold;
+    color: #f9f9f9;
+    font-size: 2.85rem;
+}
+
+.section-part-description table th:nth-child(1) {
+    border-right: 1px solid black;
+}
+
+.section-part-description table td {
+    padding: 1.5em;
+    background-color: #e2e2e2;
+    font-family: Rounded-Regular;
+    font-size: 1.25rem;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.15);
+}
+
+.section-part-description table tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+.section-part-description table tbody tr td:nth-child(1) {
+    border-right: 1px solid black;
+}
+
+.section-part-description table tbody tr td h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.form-title h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-family: Rounded-ExtraBold;
+    font-size: 4rem;
+}
+
+form {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 2em;
+    background-color: #334344;
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+
+form label {
+    font-family: Rounded-Bold;
+    font-size: 2.5rem;
+    color: #f9f9f9;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.55);
+}
+
+form input {
+    padding: 8px 12px;
+    border: none;
+    outline: none;
+    background-color: #f9f9f9;
+    font-weight: 700;
+    color: #334344;
+    font-family: Rounded-Regular;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.55);
+}
+
+form textarea {
+    padding: 8px 12px;
+    border: none;
+    outline: none;
+    background-color: #f9f9f9;
+    font-weight: 700;
+    color: #334344;
+    font-family: Rounded-Regular;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.55);
+}
+
+form button {
+    padding: .25em;
+    max-width: 33%;
+    width: 33%;
+    text-align: center;
+    align-self: flex-end;
+    font-family: Rounded-ExtraBold;
+    background-color: #f9f9f9;
+    color: #334344;
+    border: none;
+    font-size: 1.75rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.55);
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+form button:hover {
+    background-color: #0f1414;
+    color: #f9f9f9;
+}
+
+/* NOTE: Footer */
+footer {
+    bottom: 0px;
+    background-color: var(--header-bg-color);
+    padding: 3em;
+}
+
+footer p {
+    color: var(--header-letters-color);
+    text-align: center;
+    font-family: Rounded-ExtraBold;
+    font-size: 2.75rem;
+}
