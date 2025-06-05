@@ -221,6 +221,29 @@ main {
     font-size: 3rem;
 }
 
+.section-part-description button {
+    display: flex;
+    justify-content: center;
+}
+
+.section-part-description button {
+    padding: .25em;
+    margin: 0 auto;
+    font-family: Rounded-ExtraBold;
+    font-size: 2.33rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #334344;
+    color: #f9f9f9;
+    text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.section-part-description button:hover {
+    background-color: #0f1414;
+    color: white;
+}
+
 .form-title h1 {
     text-align: center;
     margin-top: 30px;
