@@ -221,7 +221,7 @@ main {
     font-size: 3rem;
 }
 
-.section-part-description button {
+.section-part-description search{
     display: flex;
     justify-content: center;
 }
