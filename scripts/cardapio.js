@@ -34,6 +34,8 @@ const loadTable = async () => {
 
     const { rows } = await getAllDB();
 
+    TBODY.innerHTML = "";
+
     if (rows.length > 0) {
         rows.map((value) => {
             let tr = createRow(value, rows.length);
